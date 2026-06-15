@@ -23,9 +23,8 @@ embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
-# Load Vector Database
 db = FAISS.load_local(
-    "vectorstore",
+    ".",
     embeddings,
     allow_dangerous_deserialization=True
 )
